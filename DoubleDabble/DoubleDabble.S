@@ -37,7 +37,6 @@ converted:
 
 .global setup
 setup:
-  rcall   IO_setup
   rcall   TIMER1Setup    ;Timer 1 Mode 0 with preload 
   rcall   ADCSetup       ;
   rcall   Init_UART                 //configure the UART for transmission
@@ -72,7 +71,6 @@ L1: dec  r19
     brne L1
     ret
 
-IO_setup:
   
 
 Init_UART:
